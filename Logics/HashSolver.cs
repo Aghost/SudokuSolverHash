@@ -13,21 +13,7 @@ namespace SudokuSolver.Logics
 
         static public int[][] SolveSudoku(char[][] board)
         {
-            /*
-            char[][] sudoku = new char[9][];
-            for (int i = 0; i < 9; i++)
-                sudoku[i] = new char[9];
-            sudoku = LoadSudoku(sudokuStr);
-            */
-
             FillHashSets(board);
-
-            /*
-            PrintSet(rows);
-            PrintSet(cols);
-            PrintSet(boxs);
-            */
-
             Solve(board, 0, 0);
 
             return CharToJagInt(board, 9);
